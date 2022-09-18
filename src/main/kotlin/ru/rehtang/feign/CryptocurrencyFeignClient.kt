@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 
-@FeignClient(name = "cryptocurrencyFeingClient", url = "\${openWeatherApi.feign.url}")
+/*@FeignClient(name = "cryptocurrencyFeingClient", url = "\${openWeatherApi.feign.url}")
 interface CryptocurrencyFeignClient {
   @GetMapping("/weather")
   fun receiveWeather(
@@ -35,3 +35,4 @@ interface CryptocurrencyFeignClient {
       @RequestParam("units") metricSystem: MetricSystem?
   ): ApiResponseDto
 }
+*/
