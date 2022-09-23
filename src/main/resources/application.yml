@@ -1,3 +1,12 @@
 spring:
   main:
     banner-mode: off
+
+feign:
+  huobi:
+    url: "https://api.huobi.pro/market/trade"
+    apiKey: "7204631f-7656921f-aad51ca2-b1rkuf4drg"
+  bybit:
+    url: "https://api-testnet.bybit.com/v2/public/mark-price-kline"
+  messari:
+    url: "https://data.messari.io/api/v1/assets/"

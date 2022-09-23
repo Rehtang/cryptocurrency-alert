@@ -32,28 +32,28 @@ dependencies {
 
     // Spring & Spring Cloud
     implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.springframework.boot:spring-boot-starter-security")
+//    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+//    implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-actuator")
-    implementation("org.springframework.boot:spring-boot-starter-validation")
+//    implementation("org.springframework.boot:spring-boot-starter-actuator")
+//    implementation("org.springframework.boot:spring-boot-starter-validation")
 
     // Swagger
     implementation("org.springdoc:springdoc-openapi-ui:${property("openApi")}")
 
     // Database
-    implementation("org.postgresql:postgresql")
-    implementation("org.liquibase:liquibase-core")
+//    implementation("org.postgresql:postgresql")
+//    implementation("org.liquibase:liquibase-core")
 
     // JWT
-    implementation("io.jsonwebtoken:jjwt:${property("jjwt")}")
+//    implementation("io.jsonwebtoken:jjwt:${property("jjwt")}")
 
     // Mapstruct
-    implementation("org.mapstruct:mapstruct:${property("mapstruct")}")
-    kapt("org.mapstruct:mapstruct-processor:${property("mapstruct")}")
+//    implementation("org.mapstruct:mapstruct:${property("mapstruct")}")
+//    kapt("org.mapstruct:mapstruct-processor:${property("mapstruct")}")
 
     // Kafka
-    implementation("org.springframework.kafka:spring-kafka")
+//    implementation("org.springframework.kafka:spring-kafka")
 
     // Test
     testImplementation("org.springframework.boot:spring-boot-starter-test")

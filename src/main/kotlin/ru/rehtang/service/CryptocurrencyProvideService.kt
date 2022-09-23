@@ -14,8 +14,8 @@ class CryptocurrencyProvideService(
     private val huobiFeignClient: HuobiFeignClient,
     private val messariClient: MessariFeignClient
 ) {
-  fun receiveBybitMarket(symbol: String,interval:String,limit:Int): BybitDto {
-    return bybitClient.receiveBybit(symbol, "1", System.currentTimeMillis(), 1)
+  fun receiveBybitMarket(symbol: String, interval: String, limit: Int): BybitDto {
+    return bybitClient.receiveBybit(symbol, interval, System.currentTimeMillis() / 1000, limit)
   }
   fun receiveMessariMarket(symbol: String): MessariDto {
     return messariClient.receiveMessari(symbol)
