@@ -1,13 +1,19 @@
 package ru.rehtang.dto
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 
 data class StatusDto(@JsonProperty("timestamp") var timestamp: String? = null)
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 data class MessariDto(
-    @JsonProperty("status") var status: StatusDto? = null,
-    @JsonProperty("slug") var slug: String? = null,
-    @JsonProperty("market_data") var marketData: MarketDataDto? = null
+    @JsonProperty("status") var status: StatusDto?,
+    @JsonProperty("data") var data: MessariDataDto?
+)
+
+data class MessariDataDto(
+    @JsonProperty("slug") var slug: String?,
+    @JsonProperty("market_data") var marketData: MarketDataDto?
 )
 
 data class MarketDataDto(
