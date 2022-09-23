@@ -6,8 +6,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients
 
 @EnableFeignClients
 @SpringBootApplication
-class CryptocurrencyAlertApplication {
+class CryptocurrencyAlertApp {
   fun main(args: Array<String>) {
-    runApplication<CryptocurrencyAlertApplication>(*args)
+    runApplication<CryptocurrencyAlertApp>(*args)
   }
 }
