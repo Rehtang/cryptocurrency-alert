@@ -3,10 +3,12 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("org.springframework.boot") version "2.6.3"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    kotlin("jvm") version "1.6.21"
+    kotlin("jvm") version "1.7.10"
     kotlin("kapt") version "1.6.21"
     kotlin("plugin.spring") version "1.6.21"
     kotlin("plugin.jpa") version "1.6.21"
+    kotlin("plugin.serialization") version "1.7.10"
+
 }
 
 extra.apply {
@@ -32,29 +34,35 @@ dependencies {
 
     // Spring & Spring Cloud
     implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
-//    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-//    implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-web")
-//    implementation("org.springframework.boot:spring-boot-starter-actuator")
-//    implementation("org.springframework.boot:spring-boot-starter-validation")
 
     // Swagger
     implementation("org.springdoc:springdoc-openapi-ui:${property("openApi")}")
 
-    // Database
-//    implementation("org.postgresql:postgresql")
-//    implementation("org.liquibase:liquibase-core")
 
-    // JWT
-//    implementation("io.jsonwebtoken:jjwt:${property("jjwt")}")
 
-    // Mapstruct
+//     Mapstruct
 //    implementation("org.mapstruct:mapstruct:${property("mapstruct")}")
 //    kapt("org.mapstruct:mapstruct-processor:${property("mapstruct")}")
 
-    // Kafka
-//    implementation("org.springframework.kafka:spring-kafka")
+    //Jackson
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.4")
 
+    // Kafka
+    implementation("org.springframework.kafka:spring-kafka")
+
+    //Serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
+
+
+    //Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+
+    //Telegram
+    implementation("dev.inmo:tgbotapi-jvm:3.2.7")
+    implementation("org.telegram:telegrambots:6.1.0")
+    implementation("org.telegram:telegrambotsextensions:6.1.0")
+    
     // Test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("com.h2database:h2")

@@ -21,7 +21,7 @@ class CryptocurrencyRestController(private val service: CryptocurrencyProvideSer
     return service.receiveBybitMarket(symbol, interval, limit)
   }
   @GetMapping("/messari")
-  fun getMessariMarket(@RequestParam symbol: String): MessariDto {
+  fun   getMessariMarket(@RequestParam symbol: String): MessariDto {
     return service.receiveMessariMarket(symbol)
   }
   @GetMapping("/huobi")
