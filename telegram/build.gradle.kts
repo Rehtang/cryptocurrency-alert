@@ -15,7 +15,6 @@ extra.apply {
     set("springCloudVersion", "2021.0.1")
     set("openApi", "1.6.8")
     set("jjwt", "0.9.1")
-    set("mapstruct", "1.5.2.Final")
 }
 
 group = "ru.rehtang"
@@ -33,11 +32,11 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     // Spring & Spring Cloud
-    implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
     implementation("org.springframework.boot:spring-boot-starter-web")
 
     // Swagger
     implementation("org.springdoc:springdoc-openapi-ui:${property("openApi")}")
+
 
     //Jackson
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.4")
@@ -48,6 +47,8 @@ dependencies {
     //Serialization
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
 
+    compileOnly("org.projectlombok:lombok:1.18.22")
+
 
     //Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
@@ -56,10 +57,7 @@ dependencies {
     implementation("dev.inmo:tgbotapi-jvm:3.2.7")
     implementation("org.telegram:telegrambots:6.1.0")
     implementation("org.telegram:telegrambotsextensions:6.1.0")
-    
-    // Test
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("com.h2database:h2")
+
 }
 
 dependencyManagement {

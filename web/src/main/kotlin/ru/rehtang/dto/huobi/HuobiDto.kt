@@ -5,15 +5,14 @@ import com.fasterxml.jackson.annotation.JsonProperty
 
 data class TickDto(
     @JsonProperty("id") var id: Long? = null,
-    @JsonProperty("ts") var timestamp: Integer? = null,
+    @JsonProperty("ts") var timestamp: Long? = null,
     @JsonProperty("data") var data: List<DataDto>? = null
 )
 
 data class DataDto(
-    @JsonProperty("id") var id: Integer? = null,
-    @JsonProperty("ts") var tradeTimeStamp: Integer? = null,
-    @JsonProperty("trade-id") var tradeId: Integer? = null,
-    @JsonProperty("a,ount") var amount: Float? = null,
+    @JsonProperty("ts") var tradeTimeStamp: Long? = null,
+    @JsonProperty("trade-id") var tradeId: Long? = null,
+    @JsonProperty("amount") var amount: Float? = null,
     @JsonProperty("price") var price: Float? = null,
     @JsonProperty("direction") var direction: String? = null,
 )
