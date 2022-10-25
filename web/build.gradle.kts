@@ -39,6 +39,12 @@ dependencies {
     // Swagger
     implementation("org.springdoc:springdoc-openapi-ui:${property("openApi")}")
 
+
+
+//     Mapstruct
+//    implementation("org.mapstruct:mapstruct:${property("mapstruct")}")
+//    kapt("org.mapstruct:mapstruct-processor:${property("mapstruct")}")
+
     //Jackson
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.4")
 
