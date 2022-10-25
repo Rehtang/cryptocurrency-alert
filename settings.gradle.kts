@@ -1,3 +1,5 @@
 
 rootProject.name = "cryptocurrency-alert"
-include("web")
+
+includeBuild("web")
+includeBuild("telegram")
